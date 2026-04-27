@@ -93,17 +93,66 @@ nav a:hover::after {
 /* ===== BUTTON ===== */
 .btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
+    margin-top: 10px;
+    padding: 10px 18px;
     background: #c24b2f;
     color: white;
     text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-family: 'Poppins', sans-serif;
     transition: 0.3s;
 }
 
 .btn:hover {
     background: #ff6a3d;
     transform: scale(1.05);
+}
+
+.btn-sm {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: transparent;
+    color: #ff6a3d;
+    border: 1px solid #ff6a3d;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s;
+}
+
+.btn-sm:hover {
+    background: #ff6a3d;
+    color: #fff;
+}
+
+/* ===== BUTTON GROUP ===== */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* ===== PLAYER CONTROLS ===== */
+.player-controls-ui {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.player-controls-ui h3 {
+    margin: 0;
+    font-size: 0.95em;
+    color: #f5f5f5;
+    flex: 1;
 }
 
 /* ===== SECTION ===== */
@@ -215,7 +264,8 @@ nav a:hover::after {
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 20px rgba(194, 75, 47, 0.4); /* Glow tipis warna primer */
+    box-shadow: 0 0 20px rgba(194, 75, 47, 0.4);
+    /* Glow tipis warna primer */
     border-left: 5px solid var(--secondary-color);
     filter: grayscale(0%);
 }
@@ -369,12 +419,35 @@ nav a:hover::after {
 }
 
 @keyframes glitch-anim {
-    0% { clip: rect(31px, 9999px, 94px, 0); transform: skew(0.5deg); }
-    20% { clip: rect(62px, 9999px, 42px, 0); transform: skew(0.1deg); }
-    40% { clip: rect(10px, 9999px, 80px, 0); transform: skew(0.8deg); }
-    60% { clip: rect(50px, 9999px, 30px, 0); transform: skew(0.2deg); }
-    80% { clip: rect(80px, 9999px, 10px, 0); transform: skew(0.4deg); }
-    100% { clip: rect(89px, 9999px, 98px, 0); transform: skew(0.5deg); }
+    0% {
+        clip: rect(31px, 9999px, 94px, 0);
+        transform: skew(0.5deg);
+    }
+
+    20% {
+        clip: rect(62px, 9999px, 42px, 0);
+        transform: skew(0.1deg);
+    }
+
+    40% {
+        clip: rect(10px, 9999px, 80px, 0);
+        transform: skew(0.8deg);
+    }
+
+    60% {
+        clip: rect(50px, 9999px, 30px, 0);
+        transform: skew(0.2deg);
+    }
+
+    80% {
+        clip: rect(80px, 9999px, 10px, 0);
+        transform: skew(0.4deg);
+    }
+
+    100% {
+        clip: rect(89px, 9999px, 98px, 0);
+        transform: skew(0.5deg);
+    }
 }
 
 /* ===== VIDEO  ===== */
@@ -389,7 +462,8 @@ nav a:hover::after {
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* Ratio 16:9 */
+    padding-bottom: 56.25%;
+    /* Ratio 16:9 */
     height: 0;
     overflow: hidden;
     border-radius: 10px;
